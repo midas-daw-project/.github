@@ -1,8 +1,8 @@
-﻿shared-contracts/
-session-system/
-workspace-modules/
-dsp-engine/
-mixer-engine/
-audio-engine/
-midas-core/
+﻿/shared-contracts/
+/session-system/
+/workspace-modules/
+/dsp-engine/
+/mixer-engine/
+/audio-engine/
+/midas-core/
 

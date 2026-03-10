@@ -8,3 +8,6 @@
 
 build/
 docs/handoffs/*.pdf
+
+/zip-snapshots/
+download-git-zips.ps1

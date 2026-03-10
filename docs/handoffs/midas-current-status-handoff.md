@@ -601,3 +601,75 @@ If you need the shortest possible version to explain where the project is:
 MIDAS currently has a real backend architecture in place. The shared contracts, façade/orchestration layer, session snapshot system, provider registry, persistence lifecycle, reconstruction/apply services, and a minimal real mixer subsystem are already built and tested. What is not built yet is the real audio engine, DSP engine, modular workspace UI/runtime, advanced mixer topology/features, and broader production integration across all repos.
 
 In other words: the backend foundation and session lifecycle are already serious and working, but the actual DAW feature surface and realtime engine are still ahead.
+
+---
+
+## Clarified product direction (discussion capture)
+
+The following points were clarified during discussion and should guide future planning so backend and product decisions stay aligned.
+
+### Marketplace and ecosystem direction
+
+MIDAS is intended to support a future platform ecosystem, not only core DAW features.
+
+Potential ecosystem components:
+
+* plugin marketplace for VST-style extensions
+* loops, samples, instruments, and presets distribution
+* official vendor participation alongside independent creators
+* potential revenue-share and vendor partnership models
+
+This is future-scope product direction, not current backend implementation.
+
+### Community hub direction
+
+A future in-product community layer is being considered for:
+
+* loop and sample sharing
+* producer communication
+* community asset exchange
+
+This should be treated as a product-direction input for future architecture boundaries, not current work.
+
+### Frontend philosophy and backend role
+
+The backend remains platform-first:
+
+* stable backend core with explicit contracts
+* frontend flexibility through adapters and API surfaces
+* support for multiple frontend implementations over time
+
+Current strategy remains backend-first while frontend technology is intentionally flexible (web, Electron, TypeScript options remain open).
+
+### UX and onboarding direction
+
+Potential future UX features discussed:
+
+* adaptive first-launch onboarding (experience, genre, tooling prompts)
+* optional learning achievements (non-intrusive, toggleable)
+* startup demo project for guided exploration
+* platform-style startup presentation (console and launcher inspired feel)
+
+These are product and UX planning inputs and should not alter current backend scope priorities.
+
+### Team role clarity
+
+Roles clarified in discussion:
+
+* Ari: backend architecture, core engine, subsystem coordination
+* Midas: UI direction, platform vision, frontend contributor alignment
+* m: creative UI and UX concepts and light coding support
+
+This split should be preserved to reduce ownership drift.
+
+### Current bottleneck
+
+Frontend implementation bandwidth is currently the primary bottleneck while backend architecture work continues in parallel.
+
+### Documentation follow-up recommendation
+
+To keep these points discoverable, maintain explicit sections in ongoing project documentation for:
+
+* future platform concepts
+* frontend design philosophy
+* marketplace and plugin ecosystem direction

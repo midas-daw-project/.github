@@ -23,3 +23,15 @@ Define realtime-safe thread responsibilities and cross-thread communication rule
 - UI -> core uses command DTOs.
 - Core -> subsystems uses typed command/query/event contracts.
 - Audio thread publishes minimal telemetry/events for non-realtime consumers.
+
+## Forbidden on audio thread
+- Blocking locks, blocking I/O, allocations that can fail, logging that blocks.
+- Access to UI state or persistence services.
+
+## State ownership
+- Audio thread owns render buffers during callback window only.
+- Shared state accessed across threads must be protected via lock-free/bounded mechanisms; no shared mutable UI objects.
+
+## Scheduling assumptions (current)
+- Audio callback cadence determined by backend sample rate and buffer size.
+- Transport/timebase authority not yet finalized; treat audio clock as primary until transport sync is defined.
